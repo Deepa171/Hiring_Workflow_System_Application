@@ -46,8 +46,7 @@
                 }
               ],
               "outputHashing": "all",
-              "optimization": true,
-              "inlineCriticalCss": false
+              "optimization": true
             },
             "development": {
               "optimization": false,
