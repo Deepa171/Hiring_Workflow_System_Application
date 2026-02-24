@@ -11,7 +11,7 @@
 }
 
 .dashboard-header {
-  background: linear-gradient(135deg, rgba(33, 6, 5, 0.8), rgba(4, 36, 23, 0.8));
+  background: linear-gradient(135deg, rgba(6, 7, 73, 0.95), rgba(7, 94, 34, 0.95));
   backdrop-filter: blur(20px);
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
   border-radius: 12px;
@@ -41,7 +41,7 @@
 }
 
 .view-btn {
-  background: linear-gradient(135deg, #024339, #060235);
+  background: linear-gradient(135deg, #075e22, #060749);
   color: white;
   border: none;
   padding: 12px 28px;
@@ -50,7 +50,7 @@
   font-weight: 600;
   cursor: pointer;
   transition: all 0.3s ease;
-  box-shadow: 0 4px 15px rgba(2, 67, 57, 0.4);
+  box-shadow: 0 4px 15px rgba(7, 94, 34, 0.4);
   display: flex;
   align-items: center;
   gap: 8px;
@@ -58,8 +58,8 @@
 
 .view-btn:hover {
   transform: translateY(-2px);
-  box-shadow: 0 6px 25px rgba(2, 67, 57, 0.5);
-  background: linear-gradient(135deg, #060235, #024339);
+  box-shadow: 0 6px 25px rgba(7, 94, 34, 0.5);
+  background: linear-gradient(135deg, #060749, #075e22);
 }
 
 .view-btn span {
