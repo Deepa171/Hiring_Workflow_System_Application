@@ -69,6 +69,11 @@ if (req.user.role !== "HR" && req.user.role !== "RECRUITER") {
     );
 
     // Send email notifications
+    console.log('\n=== EMAIL NOTIFICATION ===');
+    console.log('Candidate:', candidate.name);
+    console.log('Email:', candidate.email);
+    console.log('Status:', status);
+    
     if (candidate.email) {
       console.log(`Sending email to ${candidate.email} for status: ${status}`);
       if (status === 'SHORTLISTED') {
@@ -79,8 +84,9 @@ if (req.user.role !== "HR" && req.user.role !== "RECRUITER") {
         await sendRejectedEmail(candidate.email, candidate.name);
       }
     } else {
-      console.log('No email found for candidate:', candidate.name);
+      console.log('❌ No email found for candidate:', candidate.name);
     }
+    console.log('=========================\n');
 
     res.json({ 
       message: 'Status updated successfully',
