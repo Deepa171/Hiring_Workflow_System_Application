@@ -9,7 +9,7 @@ const app = express();
 
 // CORS configuration
 const corsOptions = {
-  origin: process.env.FRONTEND_URL || '*',
+  origin: ['https://hiring-workflow-system-application.vercel.app', 'http://localhost:4200'],
   credentials: true,
   optionsSuccessStatus: 200
 };
