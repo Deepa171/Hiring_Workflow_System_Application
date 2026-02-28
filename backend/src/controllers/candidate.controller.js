@@ -86,6 +86,7 @@ if (req.user.role !== "HR" && req.user.role !== "RECRUITER") {
 
     // Send email notifications
     if (candidate.email) {
+      console.log(`Sending email to ${candidate.email} for status: ${status}`);
       if (status === 'SHORTLISTED') {
         await sendShortlistedEmail(candidate.email, candidate.name);
       } else if (status === 'SELECTED') {
@@ -93,6 +94,8 @@ if (req.user.role !== "HR" && req.user.role !== "RECRUITER") {
       } else if (status === 'REJECTED') {
         await sendRejectedEmail(candidate.email, candidate.name);
       }
+    } else {
+      console.log('No email found for candidate:', candidate.name);
     }
 
     res.json({ 
@@ -229,7 +232,10 @@ exports.scheduleInterview = async (req, res) => {
 
     // Send email notification
     if (candidate.email) {
+      console.log(`Sending interview email to ${candidate.email}`);
       await sendInterviewScheduledEmail(candidate.email, candidate.name, interviewDate);
+    } else {
+      console.log('No email found for candidate:', candidate.name);
     }
 
     res.json({ success: true, data: candidate });
